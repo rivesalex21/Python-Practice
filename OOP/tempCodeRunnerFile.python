@@ -1,0 +1,4 @@
+@decorated_display
+def display2():
+    print('The display2 function ran')
+display2()

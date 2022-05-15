@@ -1,0 +1,28 @@
+# A decorator acts very similarly to functions and their closure. 
+
+def test(msg):
+    message = msg
+    def output():
+        print(message)
+    
+    return output
+
+def decorator_test(original_function):
+    def wrapper_output():
+        print('This is the wrapper portion of the decorator')
+        return original_function()
+    return wrapper_output
+
+
+def display():
+    print('The display function ran')
+
+decorated_display = decorator_test(display)
+decorated_display()
+
+# What we saw above is the same thing as having @decorator_test. @decorator_test causes 
+
+@decorator_test
+def display2():
+    print('The display2 function ran')
+display2()

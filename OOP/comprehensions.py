@@ -98,4 +98,3 @@ for i in gen_fun(sample):
     print(i)
 
 myGen = (i*i for i in sample)
-print(i for i in myGen)
